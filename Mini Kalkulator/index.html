@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .relative{
+            margin-left: 700px;
+            margin-top: 150px;
+            background-color: bisque;
+            height: 500px;
+            width: 500px;
+            border-radius: 30px;
+            border:3px solid black;
+        }
+
+        .naslov{
+            margin-left:110px;
+        }
+
+        .rez{
+
+            border: solid black 3px;
+            font-size: 30px;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 180px; 
+            background-color: white;
+
+
+        }
+
+        .naslov2{
+            margin-left: 180px;
+        }
+
+        .gumb{
+
+            border-radius: 20px;
+            background-color: turquoise;
+            height: 40px;
+            width: 90px;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 15px;
+             margin-left: 20px;
+             
+
+        }
+
+        .label1{
+
+            font-size: 20px;
+
+            margin:5px;
+            margin-left:20px;
+
+        }
+
+        .input1{
+            border-radius: 5px;
+
+        }
+        .gumb:hover {
+          background-color: pink;
+        color: white;
+}
+    </style>
+</head>
+<body>
+
+    <div class="relative">
+
+        <h1 class="naslov">Mini kalkulator</h1>
+
+
+        <div></div>
+        <label for="" class="label1">Unesi prvi broj: </label>
+        <input type="text" name="" id="broj1" class="input1"><br><br>
+
+        <label for="" class="label1">Unesi drugi broj: </label>
+        <input type="text" name="" id="broj2" class="input1">
+        <br><br>
+
+
+
+        <button id="btn1" class="gumb">Zbroji</button>
+        <button id="btn2" class="gumb">Oduzmi</button>
+        <button id="btn3" class="gumb">Pomnozi</button>
+        <button id="btn4" class="gumb">Podijeli</button>
+        <button id="btn5" class="gumb">Clear</button>
+        <br>
+
+        <h2 class="naslov2">Rezultat:</h2>
+
+        <div class="rez">
+
+
+
+        </div>
+
+
+    </div>
+    <script src="./index.js"></script>
+
+
+    
+</body>
+</html>
