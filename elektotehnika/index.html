@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .main-topic {
+    display: table;
+    margin: 0 auto;
+}
+
+        .relative{
+            margin-left: 700px;
+            margin-top: 150px;
+            background-color: bisque;
+            height: 500px;
+            width: 500px;
+            border-radius: 30px;
+            border:3px solid black;
+        }
+
+        .naslov{
+            margin-left:110px;
+        }
+
+        .rez{
+
+            border: solid black 3px;
+            font-size: 30px;
+            width: 150px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 130px; 
+            background-color: white;
+
+
+        }
+
+        .naslov2{
+            margin-left: 180px;
+        }
+
+        .gumb{
+
+            border-radius: 20px;
+            background-color: turquoise;
+            height: 40px;
+            width: 200px;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 15px;
+            display: flex;
+             margin-left: 100px; 
+            justify-content: center;
+             align-items: center;
+
+        }
+
+        .label1{
+
+            font-size: 20px;
+
+            margin:5px;
+            margin-left:20px;
+
+        }
+
+        .input1{
+            border-radius: 5px;
+
+        }
+        .gumb:hover {
+          background-color: pink;
+        color: white;
+}
+        .slika{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-topic">
+        <h1 class="naslov">Ohmov zakon</h1>
+        <div></div>
+        <label for="" class="label1">Unesi otpor: </label>
+        <input type="text" name="" id="otpor" class="input1">
+        <label for="" class="label1">Ω</label><br><br>
+
+        <label for="" class="label1">Unesi napon: </label>
+        <input type="text" name="" id="napon" class="input1">
+        <label for="" class="label1">V</label>
+        <br><br>
+
+
+
+        <button id="btn1" class="gumb">Izračunaj struju</button>
+        <br>
+
+        <h2 class="naslov2">Struja:</h2>
+        
+        <div class="rez">
+
+        </div>
+        <br>
+        <!-- Djelilo napona -->
+        <h1 class="naslov2">Djelilo napona</h2>
+        <div></div>
+        <label for="" class="label1">Unesi R1: </label>
+        <input type="text" name="" id="R1" class="input1">
+        <label for="" class="label1">Ω</label><br><br>
+        <label for="" class="label1">Unesi R2: </label>
+        <input type="text" name="" id="R2" class="input1">
+        <label for="" class="label1">Ω</label>
+        <br><br>
+        <label for="" class="label1">Unesi Uul: </label>
+        <input type="text" name="" id="Uul" class="input1">
+        <label for="" class="label1">V</label>
+        <br><br>
+        <button id="btn2" class="gumb">Izračunaj Uiz</button>
+        <h2 class="naslov2">Uiz:</h2>
+        <div class="rez"></div>
+        
+        <br>
+        <!-- Serijsko -->
+        <h1 class="naslov2">Serijsko spajanje otpornika</h2>
+        <div></div>
+        <label for="" class="label1">Unesi R1: </label>
+        <input type="text" name="" id="R11" class="input1">
+        <label for="" class="label1">Ω</label><br><br>
+
+        <label for="" class="label1">Unesi R2: </label>
+        <input type="text" name="" id="R21" class="input1">
+        <label for="" class="label1">Ω</label>
+        <br><br>
+        <label for="" class="label1">Unesi R3: </label>
+        <input type="text" name="" id="R31" class="input1">
+        <label for="" class="label1">Ω</label>
+        <br><br>
+        <button id="btn3" class="gumb">Izračunaj Ru</button>
+        <h2 class="naslov2">Ru:</h2>
+        <div class="rez"></div>
+
+        <br>
+        <!-- Paralelno -->
+        <h1 class="naslov2">Paralelno spajanje otpornika</h2>
+        <div></div>
+        <label for="" class="label1">Unesi R1: </label>
+        <input type="text" name="" id="R12" class="input1">
+        <label for="" class="label1">Ω</label><br><br>
+
+        <label for="" class="label1">Unesi R2: </label>
+        <input type="text" name="" id="R22" class="input1">
+        <label for="" class="label1">Ω</label>
+        <br><br>
+        <label for="" class="label1">Unesi R3: </label>
+        <input type="text" name="" id="R32" class="input1">
+        <label for="" class="label1">Ω</label>
+        <br><br>
+        <button id="btn4" class="gumb">Izračunaj Ru</button>
+        <h2 class="naslov2">Ru:</h2>
+        <div class="rez"></div>
+        <!-- Serijsko kondenzatora -->
+        <h1 class="naslov2">Serijsko spajanje kondenzatora</h2>
+        <div></div>
+        <label for="" class="label1">Unesi C1: </label>
+        <input type="text" name="" id="C1" class="input1">
+        <label for="" class="label1">F</label><br><br>
+        <label for="" class="label1">Unesi C2: </label>
+        <input type="text" name="" id="C2" class="input1">
+        <label for="" class="label1">F</label>
+        <br><br>
+        <label for="" class="label1">Unesi C3: </label>
+        <input type="text" name="" id="C3" class="input1">
+        <label for="" class="label1">F</label>
+        <br><br>
+        <button id="btn5" class="gumb">Izračunaj Cu</button>
+        <h2 class="naslov2">Cu:</h2>
+        <div class="rez"></div>
+        <!-- Paralelno kondenzatora -->
+        <h1 class="naslov2">Paralelno spajanje kondenzatora</h2>
+        <div></div>
+        <label for="" class="label1">Unesi C1: </label>
+        <input type="text" name="" id="C11" class="input1">
+        <label for="" class="label1">F</label><br><br>
+        <label for="" class="label1">Unesi C2: </label>
+        <input type="text" name="" id="C21" class="input1">
+        <label for="" class="label1">F</label>
+        <br><br>
+        <label for="" class="label1">Unesi C3: </label>
+        <input type="text" name="" id="C31" class="input1">
+        <label for="" class="label1">F</label>
+        <br><br>
+        <button id="btn6" class="gumb">Izračunaj Cu</button>
+        <h2 class="naslov2">Cu:</h2>
+        <div class="rez"></div>
+        <!-- Serijsko zavojnice -->
+        <h1 class="naslov2">Serijsko spajanje zavojnice</h2>
+        <div></div>
+        <label for="" class="label1">Unesi L1: </label>
+        <input type="text" name="" id="L1" class="input1">
+        <label for="" class="label1">H</label><br><br>
+        <label for="" class="label1">Unesi L2: </label>
+        <input type="text" name="" id="L2" class="input1">
+        <label for="" class="label1">H</label>
+        <br><br>
+        <label for="" class="label1">Unesi L3: </label>
+        <input type="text" name="" id="L3" class="input1">
+        <label for="" class="label1">H</label>
+        <br><br>
+        <button id="btn7" class="gumb">Izračunaj Lu</button>
+        <h2 class="naslov2">Lu:</h2>
+        <div class="rez"></div>
+        <!-- Paralelno zavojnice -->
+        <h1 class="naslov2">Paralelno spajanje zavojnice</h2>
+        <div></div>
+        <label for="" class="label1">Unesi L1: </label>
+        <input type="text" name="" id="L11" class="input1">
+        <label for="" class="label1">H</label><br><br>
+        <label for="" class="label1">Unesi L2: </label>
+        <input type="text" name="" id="L21" class="input1">
+        <label for="" class="label1">H</label>
+        <br><br>
+        <label for="" class="label1">Unesi L3: </label>
+        <input type="text" name="" id="L31" class="input1">
+        <label for="" class="label1">H</label>
+        <br><br>
+        <button id="btn8" class="gumb">Izračunaj Lu</button>
+        <h2 class="naslov2">Lu:</h2>
+        <div class="rez"></div>
+
+    <script src="./index.js"></script>
+
+
+    </div>
+</body>
+</html>
