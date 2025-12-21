@@ -6,35 +6,36 @@
     <title>Document</title>
 
     <style>
-        .main-topic {
-    display: table;
-    margin: 0 auto;
-}
-
+        img{
+            float: right ;
+            width: 250px;
+            margin-right: 40%;
+        }
+        .slika{
+            margin-top: 100px;
+        }
+        .slika1{
+            margin-top: 200px;
+            width: 300px;
+        }
         .relative{
             margin-left: 700px;
-            margin-top: 150px;
-            background-color: bisque;
-            height: 500px;
-            width: 500px;
-            border-radius: 30px;
-            border:3px solid black;
         }
 
         .naslov{
-            margin-left:110px;
+           margin-left: 80px;
         }
 
         .rez{
 
             border: solid black 3px;
             font-size: 30px;
-            width: 150px;
+            width: 200px;
             height: 100px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-left: 130px; 
+            margin-left: 100px; 
             background-color: white;
 
 
@@ -76,16 +77,14 @@
         .gumb:hover {
           background-color: pink;
         color: white;
-}
-        .slika{
-            width: 200px;
-            height: 200px;
         }
+
     </style>
 </head>
 <body>
-    <div class="main-topic">
-        <h1 class="naslov">Ohmov zakon</h1>
+    <div class="relative">
+        <img src="./slike/ohmov.png" class="slika" alt="">
+        <h1 class="naslov2">Ohmov zakon</h1>
         <div></div>
         <label for="" class="label1">Unesi otpor: </label>
         <input type="text" name="" id="otpor" class="input1">
@@ -95,19 +94,17 @@
         <input type="text" name="" id="napon" class="input1">
         <label for="" class="label1">V</label>
         <br><br>
-
-
-
-        <button id="btn1" class="gumb">Izračunaj struju</button>
+        <button id="btn1" class="gumb">Izračunaj I</button>
         <br>
 
-        <h2 class="naslov2">Struja:</h2>
+        <h2 class="naslov2">I:</h2>
         
         <div class="rez">
 
         </div>
         <br>
         <!-- Djelilo napona -->
+         <img src="./slike/djelilo.png" class="slika">
         <h1 class="naslov2">Djelilo napona</h2>
         <div></div>
         <label for="" class="label1">Unesi R1: </label>
@@ -127,12 +124,12 @@
         
         <br>
         <!-- Serijsko -->
-        <h1 class="naslov2">Serijsko spajanje otpornika</h2>
+         <img src="./slike/sso.png" class="slika1">
+        <h1 class="naslov">Serijsko spajanje otpornika</h2>
         <div></div>
         <label for="" class="label1">Unesi R1: </label>
         <input type="text" name="" id="R11" class="input1">
         <label for="" class="label1">Ω</label><br><br>
-
         <label for="" class="label1">Unesi R2: </label>
         <input type="text" name="" id="R21" class="input1">
         <label for="" class="label1">Ω</label>
@@ -147,7 +144,8 @@
 
         <br>
         <!-- Paralelno -->
-        <h1 class="naslov2">Paralelno spajanje otpornika</h2>
+         <img src="./slike/pso.png" class="slika">
+        <h1 class="naslov">Paralelno spajanje otpornika</h2>
         <div></div>
         <label for="" class="label1">Unesi R1: </label>
         <input type="text" name="" id="R12" class="input1">
@@ -165,7 +163,8 @@
         <h2 class="naslov2">Ru:</h2>
         <div class="rez"></div>
         <!-- Serijsko kondenzatora -->
-        <h1 class="naslov2">Serijsko spajanje kondenzatora</h2>
+         <img src="./slike/ssk.webp" class="slika">
+        <h1 class="naslov">Serijsko spajanje kondenzatora</h2>
         <div></div>
         <label for="" class="label1">Unesi C1: </label>
         <input type="text" name="" id="C1" class="input1">
@@ -182,7 +181,8 @@
         <h2 class="naslov2">Cu:</h2>
         <div class="rez"></div>
         <!-- Paralelno kondenzatora -->
-        <h1 class="naslov2">Paralelno spajanje kondenzatora</h2>
+         <img src="./slike/psk.png" class="slika1">
+        <h1 class="naslov">Paralelno spajanje kondenzatora</h2>
         <div></div>
         <label for="" class="label1">Unesi C1: </label>
         <input type="text" name="" id="C11" class="input1">
@@ -199,7 +199,8 @@
         <h2 class="naslov2">Cu:</h2>
         <div class="rez"></div>
         <!-- Serijsko zavojnice -->
-        <h1 class="naslov2">Serijsko spajanje zavojnice</h2>
+         <img src="./slike/ssz.webp" class="slika1">
+        <h1 class="naslov">Serijsko spajanje zavojnice</h2>
         <div></div>
         <label for="" class="label1">Unesi L1: </label>
         <input type="text" name="" id="L1" class="input1">
@@ -216,7 +217,8 @@
         <h2 class="naslov2">Lu:</h2>
         <div class="rez"></div>
         <!-- Paralelno zavojnice -->
-        <h1 class="naslov2">Paralelno spajanje zavojnice</h2>
+         <img src="./slike/psz.webp" class="slika1">
+        <h1 class="naslov">Paralelno spajanje zavojnice</h2>
         <div></div>
         <label for="" class="label1">Unesi L1: </label>
         <input type="text" name="" id="L11" class="input1">
@@ -232,6 +234,39 @@
         <button id="btn8" class="gumb">Izračunaj Lu</button>
         <h2 class="naslov2">Lu:</h2>
         <div class="rez"></div>
+        <!-- Računanje indukvitet ražnog svitka -->
+         <img src="./slike/Coil_Inductor.webp" class="slika">
+        <h1 class="naslov">Indukvitet zračnog svitka</h2>
+        <div></div>
+        <label for="" class="label1">Unesi Z: </label>
+        <input type="text" name="" id="Z" class="input1">
+        <label for="" class="label1"></label><br><br>
+        <label for="" class="label1">Unesi s: </label>
+        <input type="text" name="" id="S" class="input1">
+        <label for="" class="label1">m2</label>
+        <br><br>
+        <label for="" class="label1">Unesi l: </label>
+        <input type="text" name="" id="l" class="input1">
+        <label for="" class="label1">m</label>
+        <br><br>
+        <button id="btn9" class="gumb">Izračunaj L</button>
+        <h2 class="naslov2">L:</h2>
+        <div class="rez"></div>
+        <!-- Računanje Induktivnog otpoora -->
+        <img src="./slike/induktivni_otpor.jpg" class="slika1">
+        <h1 class="naslov">Induktivni otpor</h2>
+        <div></div>
+        <label for="" class="label1">Unesi ω: </label>
+        <input type="text" name="" id="w" class="input1">
+        <label for="" class="label1">Hz</label><br><br>
+        <label for="" class="label1">Unesi L: </label>
+        <input type="text" name="" id="L4" class="input1">
+        <label for="" class="label1">H</label>
+        <br><br>
+        <button id="btn10" class="gumb">Izračunaj Xl</button>
+        <h2 class="naslov2">Xl:</h2>
+        <div class="rez"></div>
+
 
     <script src="./index.js"></script>
 
