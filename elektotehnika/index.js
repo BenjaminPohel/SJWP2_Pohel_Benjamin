@@ -43,7 +43,7 @@ function Dijeljenje(a1,a2,a3){
 }
 function x1(a1,a2,a3){
     let a4=4*Math.PI*Math.pow(10,-7)
-    return a4*(Math.pow(a1,2)*a2/a3);
+    return a4*(Math.pow(a1,2)*a2/a3)*1000000;
 }
 function x2(a1,a2){
     return 1/(a1*a2);
@@ -53,14 +53,14 @@ function x2(a1,a2){
 btn1.onclick = () => {
     let a1 = Number(document.getElementById("napon").value);
     let a2 = Number(document.getElementById("otpor").value);
-    rez.textContent = "I="+Zbroj(a1,a2)+"A";
+    rez.textContent = "I="+Zbroj(a1,a2).toFixed(2)+"A";
 };
 
 btn2.onclick = () => {
     let a1 = Number(document.getElementById("R1").value);
     let a2 = Number(document.getElementById("R2").value);
     let a3 = Number(document.getElementById("Uul").value);
-    rez2.textContent = "Uiz="+Razlika(a1,a2,a3)+"V";
+    rez2.textContent = "Uiz="+Razlika(a1,a2,a3).toFixed(2)+"V";
 };
 
 
@@ -68,7 +68,7 @@ btn3.onclick = () => {
     let a1 = Number(document.getElementById("R11").value);
     let a2 = Number(document.getElementById("R21").value);
     let a3 = Number(document.getElementById("R31").value);
-    rez3.textContent = "Ru="+Mnozenje(a1,a2,a3)+"Ω";
+    rez3.textContent = "Ru="+Mnozenje(a1,a2,a3).toFixed(2)+"Ω";
 };
 
 
@@ -76,46 +76,48 @@ btn4.onclick = () => {
     let a1 = Number(document.getElementById("R12").value);
     let a2 = Number(document.getElementById("R22").value);
     let a3 = Number(document.getElementById("R32").value);
-    rez4.textContent = "Ru="+Dijeljenje(a1,a2,a3)+"Ω";
+    rez4.textContent = "Ru="+Dijeljenje(a1,a2,a3).toFixed(2)+"Ω";
 };
-
 btn5.onclick=()=>{
     let a1 = Number(document.getElementById("C1").value);
     let a2 = Number(document.getElementById("C2").value);
-    let a3 = Number(document.getElementById("C3").value);
-    rez5.textContent="Cu="+Dijeljenje(a1,a2,a3)+"F";
+    let a3 = Number(document.getElementById("C3").value);;
+    rez5.textContent="Cu="+Dijeljenje(a1,a2,a3).toFixed(2)+"F";
 }
-
 btn6.onclick=()=>{
     let a1 = Number(document.getElementById("C11").value);
     let a2 = Number(document.getElementById("C21").value);
-    let a3 = Number(document.getElementById("C31").value);
-    rez6.textContent="Cu="+Mnozenje(a1,a2,a3)+"F";
+    let a3 = Number(document.getElementById("C31").value);;
+    rez6.textContent="Cu="+Mnozenje(a1,a2,a3).toFixed(2)+"F";
 }
-
 btn7.onclick=()=>{
     let a1 = Number(document.getElementById("L1").value);
     let a2 = Number(document.getElementById("L2").value);
-    let a3 = Number(document.getElementById("L3").value);
-    rez7.textContent="Lu="+Mnozenje(a1,a2,a3)+"H";
+    let a3 = Number(document.getElementById("L3").value);;
+    rez7.textContent="Lu="+Mnozenje(a1,a2,a3).toFixed(2)+"H";
 }
-
 btn8.onclick=()=>{
     let a1 = Number(document.getElementById("L11").value);
     let a2 = Number(document.getElementById("L21").value);
-    let a3 = Number(document.getElementById("L31").value);
-    rez8.textContent="Lu="+Dijeljenje(a1,a2,a3)+"H";
+    let a3 = Number(document.getElementById("L31").value);;
+    rez8.textContent="Lu="+Dijeljenje(a1,a2,a3).toFixed(2)+"H";
 }
 btn9.onclick=()=>{
     let a1 = Number(document.getElementById("Z").value);
     let a2 = Number(document.getElementById("S").value);
-    let a3 = Number(document.getElementById("l").value);
-    rez9.textContent="L="+Math.round(x1(a1,a2,a3)*1000000).toFixed(2)+"μH";
+    let a3 = Number(document.getElementById("l").value);;
+    rez9.textContent="L="+x1(a1,a2,a3).toFixed(2)+"H";
+}
+btn9.onclick=()=>{
+    let a1 = Number(document.getElementById("Z").value);
+    let a2 = Number(document.getElementById("S").value);
+    let a3 = Number(document.getElementById("l").value);;
+    rez9.textContent="L="+x1(a1,a2,a3).toFixed(2)+"μH";
 }
 btn10.onclick=()=>{
     let a1 = Number(document.getElementById("w").value);
     let a2 = Number(document.getElementById("L4").value);
-    rez10.textContent="Xl="+x2(a1,a2)+"Ω";
+    rez10.textContent="Xl="+x2(a1,a2).toFixed(2)+"Ω";
 }
 
 
