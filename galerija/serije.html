@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>serije</title>
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1E90FF;
+}
+
+h2, p {
+  margin: 10px;
+}
+
+header {
+  background-color: #1a1a2e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 56px;
+}
+
+.logo {
+  color: #1E90FF;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 6px 14px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover {
+  background-color: rgba(255,255,255,0.08);
+  color: #fff;
+}
+
+nav a.active {
+  color: #fff;
+}
+
+.galerija {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 40px;
+}
+
+.slika:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.1);
+}
+
+#modal1 {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: -100px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  animation: fadeIn 0.3s;
+}
+
+#modal1 .sadrzaj {
+  background: white;
+  margin: 10% auto;
+  padding: 20px;
+  width: 600px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  animation: zoomIn 0.3s;
+  position: relative;
+}
+
+.tekst {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#modalText {
+  text-align: left;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.film {
+  text-align: center;
+  border: 3px solid #4169E1;
+  border-radius: 10px;
+  padding: 8px;
+  background-color: #1E90FF;
+}
+
+.naslov {
+  margin-top: 30px;
+  margin-left: 200px;
+  font-size: 30px;
+}
+
+.prvi {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.prvi:hover {
+  color: red;
+  transform: scale(1.2);
+}
+
+.film img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.film p {
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a class="logo" href="filmovi.html">Filmoviplex
+  </a>
+  <nav>
+    <a href="filmovi.html">Filmovi</a>
+    <a href="serije.html" class="active">Serije</a>
+    <a href="igre.html">Igre</a>
+  </nav>
+</header>
+
+<h2 class="naslov">Serije:</h2>
+
+<div class="galerija">
+
+<div class="film"><img class="slika" data-opis="breaking bad" src="https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDdmLWJjOTUtYjc2OWQyOTg0NWViXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_FMjpg_UX1000_.jpg"><p>Breaking Bad</p></div>
+<div class="film"><img class="slika" data-opis="game of thrones" src="https://m.media-amazon.com/images/M/MV5BN2IzYzBiOTQtNGZmMi00NDI5LTgxMzMtN2EzZjA1NjhlOGMxXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg"><p>Game of Thrones</p></div>
+<div class="film"><img class="slika" data-opis="chernobyl" src="https://m.media-amazon.com/images/M/MV5BOGRhY2UzNDEtNzMyNS00YzlmLTgxY2ItMGQzMjlhYWZkZDFjXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg"><p>Chernobyl</p></div>
+<div class="film"><img class="slika" data-opis="the wire" src="https://m.media-amazon.com/images/M/MV5BZGExYjQzNTMtMjY2Yy00ODQ4LTkxZWMtOTc2OTcxNjM4ZTQ5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg"><p>The Wire</p></div>
+<div class="film"><img class="slika" data-opis="stranger things" src="https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg"><p>Stranger Things</p></div>
+
+<div class="film"><img class="slika" data-opis="the sopranos" src="https://m.media-amazon.com/images/M/MV5BNTNlMTZiZWMtMTAzYy00YzliLTk0ZjAtMmM4NjYxNTk0MDM2XkEyXkFqcGdeQXVyNTA4NTY1MzY@._V1_FMjpg_UX1000_.jpg"><p>The Sopranos</p></div>
+<div class="film"><img class="slika" data-opis="band of brothers" src="https://m.media-amazon.com/images/M/MV5BZjY2YjQ5NTgtNGVmNy00NmI0LTk4ZTYtYjQ2NjEwYjhlYmNmXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg"><p>Band of Brothers</p></div>
+<div class="film"><img class="slika" data-opis="true detective" src="https://m.media-amazon.com/images/M/MV5BMTkzNzAzMDYyNF5BMl5BanBnXkFtZTgwNTQ3NzAzMjE@._V1_FMjpg_UX1000_.jpg"><p>True Detective</p></div>
+<div class="film"><img class="slika" data-opis="the last of us" src="https://m.media-amazon.com/images/M/MV5BZGUzYTI3M2EtZmM0Yy00NGUyLWI4ODEtN2Q3ZGJlYzhhZjU3XkEyXkFqcGdeQXVyNTM0OTY1OQ@@._V1_FMjpg_UX1000_.jpg"><p>The Last of Us</p></div>
+<div class="film"><img class="slika" data-opis="better call saul" src="https://m.media-amazon.com/images/M/MV5BZmUwNjQ0ODc5M15BMl5BanBnXkFtZTgwMTkwMjQ0NzE@._V1_FMjpg_UX1000_.jpg"><p>Better Call Saul</p></div>
+
+<div class="film"><img class="slika" data-opis="the office" src="https://m.media-amazon.com/images/M/MV5BMjNjMzMwNTM5OV5BMl5BanBnXkFtZTcwMDcxNjkzMQ@@._V1_FMjpg_UX1000_.jpg"><p>The Office</p></div>
+<div class="film"><img class="slika" data-opis="peaky blinders" src="https://m.media-amazon.com/images/M/MV5BMTkzNzAzMDYyNF5BMl5BanBnXkFtZTgwMjM5NTQ3MjE@._V1_FMjpg_UX1000_.jpg"><p>Peaky Blinders</p></div>
+<div class="film"><img class="slika" data-opis="squid game" src="https://m.media-amazon.com/images/M/MV5BYWE3MDVkN2EtNjQ5MS00ZDQ4LTliNzYtMjc2YWMzMDEwMTA3XkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_FMjpg_UX1000_.jpg"><p>Squid Game</p></div>
+<div class="film"><img class="slika" data-opis="dark" src="https://m.media-amazon.com/images/M/MV5BOTk3NTkwNjQ5Nl5BMl5BanBnXkFtZTgwMzY0MzY2NzM@._V1_FMjpg_UX1000_.jpg"><p>Dark</p></div>
+<div class="film"><img class="slika" data-opis="house of the dragon" src="https://m.media-amazon.com/images/M/MV5BNTVkNTU3M2UtMGQwNy00OTg4LWE4NzYtNDZiZGI5ZjZhMmQzXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg"><p>House of the Dragon</p></div>
+
+<div class="film"><img class="slika" data-opis="wednesday" src="https://m.media-amazon.com/images/M/MV5BNzgzNjc5NzctMTMxNi00NDQxLWI4MzgtOTQzN2YyNWZkZjJiXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg"><p>Wednesday</p></div>
+<div class="film"><img class="slika" data-opis="ozark" src="https://m.media-amazon.com/images/M/MV5BMTY4MDk1NjktMjFhMC00ODYwLWJmNzMtNTA5OGUwMzQ3NDA3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg"><p>Ozark</p></div>
+<div class="film"><img class="slika" data-opis="the mandalorian" src="https://m.media-amazon.com/images/M/MV5BZDhlMzY0ZGItZTcyNS00ZTAxLWIyMmYtZGQ2MDYyZjYyNDc5XkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_FMjpg_UX1000_.jpg"><p>The Mandalorian</p></div>
+<div class="film"><img class="slika" data-opis="black mirror" src="https://m.media-amazon.com/images/M/MV5BYTM3YWVhMGMtNmY5MC00NzMwLWI4MWUtYTU0YTgwMjJmZGMwXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_FMjpg_UX1000_.jpg"><p>Black Mirror</p></div>
+<div class="film"><img class="slika" data-opis="narcos" src="https://m.media-amazon.com/images/M/MV5BNDgxNzAxNjMtNzIyZi00ZGY1LTgxMWEtMGYzZTBjMDVlN2M3XkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_FMjpg_UX1000_.jpg"><p>Narcos</p></div>
+
+</div>
+
+<div id="modal1">
+  <div class="sadrzaj">
+    <span class="prvi">&times;</span>
+    <img id="modalSlika" style="width:50%">
+    <p id="modalText"></p>
+  </div>
+</div>
+
+<script src="serije.js"></script>
+
+</body>
+</html>
